@@ -1,4 +1,10 @@
 <aside class="Sidebar">
   <h2>Sidebar</h2>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta obcaecati unde odio, ipsam odit enim quaerat nobis mollitia laborum, minus, ullam iure voluptas ad. Voluptate consectetur tempore quas ipsam nulla!</p>
+  <?php 
+    // activar sidebar dinamico
+    if(is_active_sidebar('main_sidebar')):
+    dynamic_sidebar('main_sidebar');
+  else: ?>
+    <p>no hay widget</p>
+  <?php endif; ?>
 </aside>

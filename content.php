@@ -27,3 +27,8 @@
     <p>El contenido solicitado no existe</p>
   <?php endif; ?>
 </article>
+<section class="Pagination">
+<?php //previous_post_link(); ?>
+<?php //next_post_link(); ?>
+<?php echo paginate_links(); ?>
+</section>
