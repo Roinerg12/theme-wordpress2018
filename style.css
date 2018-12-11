@@ -18,4 +18,61 @@ html{
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   background-color: #ccc;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before,
+ul{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+.Header,
+.Main,
+.Footer{
+  border: thin solid indigo;
+  margin-bottom: 1rem;
+}
+.Main{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: 'content sidebar'
+                      'other sidebar';
+  grid-gap: 1em;
+}
+.Main > *{
+  background-color: #fafafa;
+  padding: 1em;
+  color: #222222;
+}
+.Content{
+  grid-area: content;
+}
+.Content hr{
+  border: thick solid #222222;
+  width: 80%;
+  margin: 3em;
+}
+.Sidebar{
+  grid-area: sidebar;
+}
+.Other{
+  grid-area: other;
+}
+.Widget, .Other{
+  background-color: #aaa;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+.Error404{
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
 }

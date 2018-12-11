@@ -1,5 +1,5 @@
 </main>
-  <footer>
+  <footer class="Footer">
   <?php if(has_nav_menu('social_menu')):
      // si ha creado el menú lo imprime
      wp_nav_menu(array(
